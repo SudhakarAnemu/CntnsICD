@@ -1,8 +1,5 @@
 JS 
 
-URL : 
-http://10.225.4.210:8080
-http://10.225.4.210:8080/
 
 
 
@@ -32,5 +29,14 @@ OpenJDK 64-Bit Server VM (Red_Hat-17.0.14.0.7-1) (build 17.0.14+7-LTS, mixed mod
 [root@esb-poc-instance-1 jenkinssw]# cat /var/lib/jenkins/secrets/initialAdminPassword
 7aadcade0b34476ea73d26e964b714c1
 [root@esb-poc-instance-1 jenkinssw]#
+
+
+------------------------------------------------------------------------------------------------------------- Install docker as Agent at Jenkins. 
+Log in to Jenkins.
+Go to Manage Jenkins > Manage Plugins.
+In the Available tab, search for "Docker Pipeline".
+Select the plugin and click the Install button.
+Restart Jenkins after the plugin is installed.
+http://<ip>/restart --> to restart Jenkins 
 
 
