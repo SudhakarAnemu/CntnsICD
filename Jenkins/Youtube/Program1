@@ -1,0 +1,36 @@
+JS 
+
+Practice\my-first-pipeline
+
+1. Docker agent is working as expected or not. 
+
+2. Jenkins job : 
+https://github.com/SudhakarAnemu/CntnsICD/tree/main/Jenkins/Practice/my-first-pipeline
+
+3. 
+   [root@esb-poc-instance-1 ~]# usermod -aG docker jenkins
+[root@esb-poc-instance-1 ~]# id jenkins
+uid=987(jenkins) gid=987(jenkins) groups=987(jenkins),989(docker)
+[root@esb-poc-instance-1 ~]#
+
+4. Below are the properties I am giving : 
+
+a. Repo URL : https://github.com/SudhakarAnemu/CntnsICD
+b. Branch Specifier : */main 
+c. Script Path : Jenkins/Practice/my-first-pipeline/Jenkinsfile
+
+d. Content of the Jenkins file : 
+
+pipeline {
+    agent {
+        docker {image 'node:16-alpine'}
+    }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
+}
+
