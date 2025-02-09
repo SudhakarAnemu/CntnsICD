@@ -39,4 +39,4 @@ Select the plugin and click the Install button.
 Restart Jenkins after the plugin is installed.
 http://<ip>/restart --> to restart Jenkins 
 
-
+	
